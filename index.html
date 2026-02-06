@@ -13,7 +13,7 @@
         font-family: 'Segoe UI', sans-serif;
         display: flex;
         justify-content: center;
-        overflow-y: auto; /* ✅ allow scrolling */
+        overflow-y: auto;
     }
 
     .card {
@@ -27,14 +27,8 @@
         position: relative;
     }
 
-    h1 {
+    h1, h2 {
         color: #e6005c;
-        margin-bottom: 10px;
-    }
-
-    h2 {
-        color: #e6005c;
-        margin-top: 20px;
     }
 
     .rose {
@@ -68,7 +62,6 @@
         border-radius: 30px;
         cursor: pointer;
         position: absolute;
-        transition: 0.2s;
     }
 
     #yesBtn {
@@ -76,10 +69,6 @@
         color: white;
         left: 25%;
         transform: translateX(-50%);
-    }
-
-    #yesBtn:hover {
-        background: #cc0052;
     }
 
     #noBtn {
@@ -91,7 +80,7 @@
 
     #roseMessage {
         display: none;
-        margin-top: 25px;
+        margin-top: 30px;
         animation: fadeIn 1.2s ease;
     }
 
@@ -106,73 +95,72 @@
 
 <div class="card">
     <div class="rose">🌹</div>
-    <h1>Hey My Love ❤️</h1>
 
-    <h2>Will you be mine this Rose Day? 💖</h2>
+    <h1>Hey My Love ❤️</h1>
+    <h2>Will you be mine this Rose Day?</h2>
 
     <div class="buttons">
         <button id="yesBtn" onclick="showMessage()">YES ❤️</button>
         <button id="noBtn">NO 🙈</button>
     </div>
 
-    <!-- Message appears after YES -->
+    <!-- Sui Generis Message -->
     <div id="roseMessage">
         <h1>Happy Rose Day 🌹</h1>
 
-        <p><strong>Hey Ishu Pishu,</strong></p>
-
-        <p>Finally… it’s <strong>7th February</strong> 🌹</p>
+        <p><strong>Hey Ishita, my love,</strong></p>
 
         <p>
-            On this beautiful Rose Day, I wish I could place a rose in your hands —
-            one that never fades, never dries, never loses its fragrance… just like
-            what I feel for you.
+            So finally… it’s <strong>7th of February</strong>.  
+            Rose Day.
         </p>
 
         <p>
-            You entered my life so quietly, without any noise, yet you changed
-            everything so beautifully. You didn’t just become a part of my world —
-            you <em>became</em> my world.
+            I know things aren’t perfect right now.  
+            I know life isn’t exactly where we once imagined it to be.  
+            But today still matters — because it’s Rose Day, and because <strong>you</strong> matter.
         </p>
 
         <p>
-            Every smile of yours feels like a blessing I don’t deserve but still
-            thank God for every single day. Every moment with you has a way of
-            lighting up even my darkest days.
+            You’re the only rose I’ve ever truly known.  
+            Not one among many — just one.  
+            The kind whose fragrance stays,  
+            the kind you recognize even with your eyes closed.
         </p>
 
         <p>
-            I’m sorry I can’t send you anything right now — no rose, no gift…
-            bas ye ehsaas, bas ye words… straight from my heart to you, from here.
+            I don’t care about bouquets or gestures meant for the world.  
+            I care about <em>this</em> rose —  
+            the one I chose,  
+            the one I respect,  
+            the one my heart never learned to replace.
         </p>
 
         <p>
-            Sach kahun, Ishu…<br>
-            <strong>aaj tumhari bohot yaad aa rahi hai.</strong><br>
-            Woh wali yaad jo chupchaap aa kar dil ke kone mein baith jaati hai
-            aur aankhon ko bhaari kar deti hai.
+            I wish I could send you something today —  
+            a rose, a gift, something you could hold.  
+            But all I have right now are these words,  
+            and every single one of them is yours.
         </p>
 
         <p>
-            You’ve always been the rose of my life — the only one that truly
-            mattered to me. A rose whose petals I never wanted to see wither,
-            a rose I always wanted to protect, keep fresh, keep alive… forever.
+            So here it is, quietly and honestly,  
+            from my heart to yours:
         </p>
 
         <p>
-            No matter what, no matter where life takes us —
-            that rose will always bloom in my heart.
+            <strong>Happy Rose Day, my love.</strong> 🌹<br>
+            Happy Rose Day, <strong>Ishita</strong>.
         </p>
 
         <p>
-            This rose is a promise — of care, respect, laughter,
-            and endless memories together.
-            Thank you for being you ❤️
+            I miss you — not loudly,  
+            but deeply.  
+            The kind of missing that stays.
         </p>
 
         <p>
-            Miss you.<br>
-            Always. 🌹💖
+            Always. ❤️
         </p>
     </div>
 </div>
@@ -199,8 +187,6 @@
     function showMessage() {
         document.getElementById("roseMessage").style.display = "block";
         document.querySelector(".buttons").style.display = "none";
-
-        // auto scroll to message 💖
         setTimeout(() => {
             document.getElementById("roseMessage")
                 .scrollIntoView({ behavior: "smooth" });
